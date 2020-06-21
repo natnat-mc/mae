@@ -11,11 +11,16 @@ describe 'mae', ->
 		assert.equal mae.perform, perform
 
 	it 'exports effects and value', ->
-		import effects, value from require 'mae.sugar'
+		import effects, value, wrap from require 'mae.sugar'
 		assert.equal mae.effects, effects
 		assert.equal mae.value, value
+		assert.equal mae.wrap, wrap
 
 	it 'exports coroutine', ->
 		coroutine = require 'mae.coroutine'
 		assert.equal mae.coroutine, coroutine
+
+	it 'exports std', ->
+		std = require 'mae.std'
+		assert.equal mae.std, std
 
