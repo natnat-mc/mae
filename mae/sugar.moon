@@ -19,7 +19,11 @@ effects = ->
 value = (obj) ->
 	obj.value
 
+wrap = (handlers) ->
+	(fn) -> handle fn, handlers
+
 {
 	:effects, :value
+	:wrap
 }
 

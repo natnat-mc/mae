@@ -41,3 +41,14 @@ describe 'sugar', ->
 			a = {value: 1}
 			assert.equal 1, value a
 
+	describe 'wrap', ->
+		import wrap from require 'mae.sugar'
+
+		it 'wraps handle', ->
+			handlers = {}
+			f = ->
+			w = wrap handlers
+			assert.equal 'function', type w
+			w f
+			assert.stub(maeperform.handle).was.called_with f, handlers
+

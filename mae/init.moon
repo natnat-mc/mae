@@ -1,12 +1,12 @@
 import Effect from require 'mae.effect'
 import perform, handle from require 'mae.perform'
-import effects, value from require 'mae.sugar'
+import effects, value, wrap from require 'mae.sugar'
 coroutine = require 'mae.coroutine'
 
 {
 	:Effect
 	:perform, :handle
-	:effects, :value
+	:effects, :value, :wrap
 	:coroutine
 }
 
